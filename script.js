@@ -1,29 +1,39 @@
 function createGrid() {
-    const container = document.querySelector('.top');
-    const width = container.offsetWidth;
-    const height = container.offsetHeight;
+    const width = Math.max(window.innerWidth, window.screen.width, 3000);
+    const height = Math.max(window.innerHeight, window.screen.height, 3000);
     const gap = 200;
 
     const gridEl = document.createElement('div');
     gridEl.className = 'grid-lines';
-    container.prepend(gridEl);
+    document.body.prepend(gridEl);
 
-    for (let x = gap; x < width; x += gap) {
-        const line = document.createElement('div');
-        line.className = 'grid-line grid-line--vertical';
-        line.style.left = x + 'px';
-        line.style.transformOrigin = Math.random() > 0.5 ? 'top' : 'bottom';
-        line.style.animationDelay = (Math.random() * 0.8) + 's';
-        gridEl.appendChild(line);
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    for (let offset = 0; offset < width; offset += gap) {
+        [centerX - offset, centerX + offset].forEach(x => {
+            if (offset !== 0 || x === centerX) {
+                const line = document.createElement('div');
+                line.className = 'grid-line grid-line--vertical';
+                line.style.left = x + 'px';
+                line.style.transformOrigin = Math.random() > 0.5 ? 'top' : 'bottom';
+                line.style.animationDelay = (Math.random() * 0.8) + 's';
+                gridEl.appendChild(line);
+            }
+        });
     }
 
-    for (let y = gap; y < height; y += gap) {
-        const line = document.createElement('div');
-        line.className = 'grid-line grid-line--horizontal';
-        line.style.top = y + 'px';
-        line.style.transformOrigin = Math.random() > 0.5 ? 'left' : 'right';
-        line.style.animationDelay = (Math.random() * 0.8) + 's';
-        gridEl.appendChild(line);
+    for (let offset = 0; offset < height; offset += gap) {
+        [centerY - offset, centerY + offset].forEach(y => {
+            if (offset !== 0 || y === centerY) {
+                const line = document.createElement('div');
+                line.className = 'grid-line grid-line--horizontal';
+                line.style.top = y + 'px';
+                line.style.transformOrigin = Math.random() > 0.5 ? 'left' : 'right';
+                line.style.animationDelay = (Math.random() * 0.8) + 's';
+                gridEl.appendChild(line);
+            }
+        });
     }
 }
 
@@ -100,12 +110,35 @@ const contactLinksObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 contactLinksObserver.observe(contactLinks);
 
-const h2El = document.querySelector('.hero-text-inner h2');
-h2El.innerHTML = h2El.innerHTML.replace(/\S/g, char => `<span>${char}</span>`);
+const word1 = document.querySelector('#hero-word1');
+word1.innerHTML = word1.innerHTML.replace(/\S/g, char => `<span>${char}</span>`);
 
-document.querySelectorAll('.hero-text-inner h2 span').forEach((span, i) => {
+document.querySelectorAll('#hero-word1 span').forEach((span, i) => {
     span.style.animationDelay = `${i * 0.05}s`;
 });
+
+const heroWords = ['Developer', 'Designer'];
+let heroWordIndex = 0;
+const wc = document.querySelector('.wc');
+
+function cycleHeroWord() {
+    wc.classList.add('line-visible');
+    word1.classList.add('exiting');
+
+    setTimeout(() => {
+        heroWordIndex = (heroWordIndex + 1) % heroWords.length;
+        word1.textContent = heroWords[heroWordIndex];
+        word1.classList.remove('exiting');
+        word1.classList.add('entering');
+
+        setTimeout(() => {
+            word1.classList.remove('entering');
+            setTimeout(() => wc.classList.remove('line-visible'), 200);
+        }, 500);
+    }, 500);
+}
+
+setTimeout(() => setInterval(cycleHeroWord, 5000), 2000);
 
 const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
