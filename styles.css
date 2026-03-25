@@ -48,7 +48,6 @@ a, button, input, textarea {
     position: fixed;
     inset: 0;
     pointer-events: none;
-    overflow: hidden;
     z-index: 0;
 }
 
@@ -60,7 +59,7 @@ a, button, input, textarea {
 .grid-line--vertical {
     width: 1px;
     top: 0;
-    bottom: 0;
+    height: 100%;
     transform: scaleY(0);
     animation: lineInY 4s ease forwards;
 }

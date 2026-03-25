@@ -1,43 +1,49 @@
 function createGrid() {
     const width = Math.max(window.innerWidth, window.screen.width, 3000);
-    const height = Math.max(window.innerHeight, window.screen.height, 3000);
+    const pageHeight = document.body.scrollHeight;
+    const maxScroll = pageHeight - window.innerHeight;
+    const height = pageHeight + maxScroll * 0.3 + window.innerHeight;
     const gap = 200;
 
     const gridEl = document.createElement('div');
     gridEl.className = 'grid-lines';
+    gridEl.style.height = height + 'px';
     document.body.prepend(gridEl);
 
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
 
     for (let offset = 0; offset < width; offset += gap) {
-        [centerX - offset, centerX + offset].forEach(x => {
-            if (offset !== 0 || x === centerX) {
-                const line = document.createElement('div');
-                line.className = 'grid-line grid-line--vertical';
-                line.style.left = x + 'px';
-                line.style.transformOrigin = Math.random() > 0.5 ? 'top' : 'bottom';
-                line.style.animationDelay = (Math.random() * 0.8) + 's';
-                gridEl.appendChild(line);
-            }
+        const xPositions = offset === 0 ? [centerX] : [centerX - offset, centerX + offset];
+        xPositions.forEach(x => {
+            const line = document.createElement('div');
+            line.className = 'grid-line grid-line--vertical';
+            line.style.left = x + 'px';
+            line.style.transformOrigin = Math.random() > 0.5 ? 'top' : 'bottom';
+            line.style.animationDelay = (Math.random() * 0.8) + 's';
+            gridEl.appendChild(line);
         });
     }
 
     for (let offset = 0; offset < height; offset += gap) {
-        [centerY - offset, centerY + offset].forEach(y => {
-            if (offset !== 0 || y === centerY) {
-                const line = document.createElement('div');
-                line.className = 'grid-line grid-line--horizontal';
-                line.style.top = y + 'px';
-                line.style.transformOrigin = Math.random() > 0.5 ? 'left' : 'right';
-                line.style.animationDelay = (Math.random() * 0.8) + 's';
-                gridEl.appendChild(line);
-            }
+        const yPositions = offset === 0 ? [centerY] : [centerY - offset, centerY + offset];
+        yPositions.forEach(y => {
+            const line = document.createElement('div');
+            line.className = 'grid-line grid-line--horizontal';
+            line.style.top = y + 'px';
+            line.style.transformOrigin = Math.random() > 0.5 ? 'left' : 'right';
+            line.style.animationDelay = (Math.random() * 0.8) + 's';
+            gridEl.appendChild(line);
         });
     }
 }
 
-createGrid();
+window.addEventListener('load', createGrid);
+
+window.addEventListener('scroll', () => {
+    const grid = document.querySelector('.grid-lines');
+    grid.style.transform = `translateY(${-window.scrollY * 0.3}px)`;
+});
 
 document.querySelectorAll('.card').forEach(card => {
     card.style.setProperty('--float-duration', (3 + Math.random() * 3) + 's');
