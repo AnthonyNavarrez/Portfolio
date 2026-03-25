@@ -242,7 +242,7 @@ nav a:hover {
     opacity: 0;
     transform: translateX(-150px);
     transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.9s ease;
-    padding-left: 8rem;
+    padding-left: 10%;
 }
 
 .work-label.visible {
@@ -302,7 +302,7 @@ nav a:hover {
     position: relative;
     display: flex;
     justify-content: flex-end;
-    padding: 4rem 2rem 8rem 2rem;
+    padding: 4rem 2rem 4rem 2rem;
     overflow: hidden;
     margin-top: -6rem;
 }
@@ -327,7 +327,7 @@ nav a:hover {
     flex-direction: row;
     align-items: center;
     gap: 0.75rem;
-    left: 8rem;
+    left: 10%;
     top: 30%;
     transform: translateY(-50%) translateX(-150px);
     opacity: 0;
@@ -341,7 +341,7 @@ nav a:hover {
     margin-top: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     #contact {
         margin-top: -15rem;
     }
@@ -353,7 +353,7 @@ nav a:hover {
     flex-direction: row;
     align-items: center;
     gap: 0.75rem;
-    left: 8rem;
+    left: 10%;
     top: 30%;
     transform: translateY(-50%) translateX(-150px);
     opacity: 0;
@@ -381,7 +381,7 @@ nav a:hover {
 .contact-links {
     position: absolute;
     top: calc(30% + 2rem);
-    left: 8rem;
+    left: 10%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -459,13 +459,15 @@ nav a:hover {
     font-weight: 300;
     max-width: 40vw;
     line-height: 1.6;
-    left: 8rem;
+    left: 10%;
     opacity: 0;
-    transition: opacity 1s ease 0.3s;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease 0.3s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
 }
 
 .about-text.visible {
     opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes cardFloat {

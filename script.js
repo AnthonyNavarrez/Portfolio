@@ -73,7 +73,7 @@ const aboutObserver = new IntersectionObserver((entries) => {
             aboutText.classList.remove('visible');
         }
     });
-}, { threshold: 0.3 });
+}, { threshold: 0.4 });
 aboutObserver.observe(aboutImg);
 
 const contactLabel = document.querySelector('.contact-label');
