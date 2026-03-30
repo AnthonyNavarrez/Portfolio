@@ -504,6 +504,40 @@ nav a:hover {
     transform: translateY(0);
 }
 
+.project-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    width: fit-content;
+}
+
+.project-item .card {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
+}
+
+.project-title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: 500;
+}
+
+.project-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: #444;
+}
+
 @keyframes cardFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }

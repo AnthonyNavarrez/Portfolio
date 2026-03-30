@@ -50,29 +50,27 @@ document.querySelectorAll('.card').forEach(card => {
     card.style.setProperty('--float-delay', (Math.random() * 3) + 's');
 });
 
-const workGrid = document.querySelector('.work-grid');
-const observer = new IntersectionObserver((entries) => {
+const workGridObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            workGrid.classList.add('visible');
+            entry.target.classList.add('visible');
         } else {
-            workGrid.classList.remove('visible');
+            entry.target.classList.remove('visible');
         }
     });
 }, { threshold: 0.1 });
-observer.observe(workGrid);
+document.querySelectorAll('.work-grid').forEach(el => workGridObserver.observe(el));
 
-const workLabel = document.querySelector('.work-label');
 const workLabelObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            workLabel.classList.add('visible');
+            entry.target.classList.add('visible');
         } else {
-            workLabel.classList.remove('visible');
+            entry.target.classList.remove('visible');
         }
     });
 }, { threshold: 0.2 });
-workLabelObserver.observe(workLabel);
+document.querySelectorAll('.work-label').forEach(el => workLabelObserver.observe(el));
 
 const aboutImg = document.querySelector('.about-img');
 const aboutLabel = document.querySelector('.about-label');
