@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="reps.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Reps — Case Study</title>
+</head>
+<body class="cs-body-bg">
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav>
+        <div class="nav-left">
+            <a href="../index.html">← Back</a>
+        </div>
+        <div class="nav-right">
+        </div>
+    </nav>
+
+    <main class="case-study">
+
+        <!-- PROBLEM SECTION -->
+        <section class="cs-section">
+            <div class="cs-title-row">
+                <h1 class="cs-title">Problem</h1>
+                <a href="https://reps-designs.vercel.app/" target="_blank" rel="noopener noreferrer" class="cs-live-btn">Live Site</a>
+                <div class="cs-figma-wrap">
+                    <a href="https://www.figma.com/design/XUiU6Oq6dOpb6sLGphuyn9/Reps-project?node-id=0-1&t=GmwB72pF5o77Ofic-1" target="_blank" rel="noopener noreferrer" class="cs-figma-btn">
+                        <img src="../images/FigmaIcon.png" alt="Figma">
+                    </a>
+                    <span class="cs-figma-label">View Figma</span>
+                </div>
+            </div>
+            <hr class="cs-rule">
+            <p class="cs-body">Many Designers who want to grow their skills face two problems: figuring out what to design, and staying consistent with practice. Most people default to redesigning the same comfortable things in the same comfortable style, which doesn't push them.</p>
+
+            <h3 class="cs-subheading">How REPS solves this:</h3>
+
+            <div class="cs-two-col">
+                <div class="cs-col-left">
+                    <p class="cs-body">Reps generates a random combination of subjects, styles, and colors</p>
+                    <div class="cs-prompt-cards">
+                        <img class="cs-float" src="../images/Subject.png" alt="Subject card">
+                        <img class="cs-float" src="../images/Style.png" alt="Style card">
+                        <img class="cs-float" src="../images/Color.png" alt="Color card">
+                    </div>
+                </div>
+                <div class="cs-col-right">
+                    <p class="cs-body">With a personal gallery that archives every piece alongside the prompt that inspired it</p>
+                    <div class="cs-gallery-row">
+                        <img class="cs-float" src="../images/Card1.png" alt="Gallery card 1">
+                        <img class="cs-float" src="../images/Card2.png" alt="Gallery card 2">
+                        <img class="cs-float" src="../images/Card3.png" alt="Gallery card 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cs-streak-section">
+                <p class="cs-body">A streak system is a fun non stressful way to reward daily consistency</p>
+                <div class="cs-streak-badges">
+                    <img class="cs-float cs-streak-large" src="../images/Streak7.png" alt="7 day streak">
+                    <img class="cs-float cs-streak-medium" src="../images/Streak6.png" alt="6 day streak">
+                    <img class="cs-float cs-streak-small" src="../images/Streak5.png" alt="5 day streak">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS SECTION -->
+        <section class="cs-section">
+            <h1 class="cs-title">Process</h1>
+            <hr class="cs-rule">
+
+            <!-- Design System row -->
+            <div class="cs-two-col cs-process-row">
+                <div class="cs-col-left">
+                    <img class="cs-design-system" src="../images/DesignSystem.png" alt="Design System">
+                </div>
+                <div class="cs-col-right">
+                    <h3 class="cs-subheading">Design System</h3>
+                    <p class="cs-body">I Decided on a design system with a bold but simple Text font. And a bold red primary with softer complimentary collors</p>
+                </div>
+            </div>
+
+            <!-- Drafting Components row -->
+            <div class="cs-two-col cs-process-row">
+                <div class="cs-col-left">
+                    <h3 class="cs-subheading">Drafting Components</h3>
+                    <p class="cs-body">I wanted a casual artistic playgroundy feel. The simple rectangular components with a strict drop shadow give off the "artstic gym" vibe</p>
+                </div>
+                <div class="cs-col-right">
+                    <img class="cs-design-system" src="../images/Reps-Components.png" alt="Reps components">
+                </div>
+            </div>
+        </section>
+
+        <!-- ICON IDEATION SECTION -->
+        <section class="cs-section">
+            <div class="cs-two-col cs-process-row cs-icon-row">
+                <div class="cs-col-left cs-icon-logo-col">
+                    <img class="cs-icon-logo" src="../images/reps-logo.png" alt="Reps icon">
+                </div>
+                <div class="cs-col-right">
+                    <h3 class="cs-subheading">Icon Ideation</h3>
+                    <p class="cs-body">Since the theme of the website is an "artistic gym", this icon represents a pencil more in the shape of a dumbell</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../cursor.js"></script>
+    <script>
+        document.querySelectorAll('.cs-float').forEach(el => {
+            el.style.setProperty('--float-duration', (3 + Math.random() * 3) + 's');
+            el.style.setProperty('--float-delay', (Math.random() * 3) + 's');
+        });
+    </script>
+</body>
+</html>

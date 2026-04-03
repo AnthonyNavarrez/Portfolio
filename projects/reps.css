@@ -1,0 +1,368 @@
+/* ── Page Load Animation ── */
+@keyframes csPageIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    animation: csPageIn 0.7s ease forwards;
+}
+
+.case-study {
+    animation: csPageIn 0.7s ease 0.15s both;
+}
+
+/* ── Case Study Base ── */
+.cs-body-bg {
+    background-color: #f2ede4;
+    background-image: radial-gradient(circle, #aaa 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+.case-study {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+}
+
+/* ── Section ── */
+.cs-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ── Title ── */
+.cs-title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.cs-rule {
+    border: none;
+    border-top: 4px solid #111;
+    margin: 0;
+}
+
+/* ── Body Text ── */
+.cs-body {
+    font-family: 'DM Mono', monospace;
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    font-weight: 300;
+    line-height: 1.7;
+    color: #111;
+    max-width: 65ch;
+}
+
+/* ── Subheading ── */
+.cs-subheading {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 900;
+    color: #111;
+}
+
+/* ── Two Column Layout ── */
+.cs-two-col {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.cs-col-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cs-col-right {
+    flex: 1.2;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ── Prompt Cards (stacked) ── */
+.cs-prompt-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cs-prompt-cards img {
+    width: 100%;
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+/* ── Gallery Row ── */
+.cs-gallery-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.cs-gallery-row img {
+    flex: 1;
+    width: 0;
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+/* ── Streak Section ── */
+.cs-streak-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+.cs-streak-section .cs-body {
+    flex: 0 0 220px;
+}
+
+.cs-streak-badges {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex: 1;
+}
+
+.cs-streak-large {
+    width: clamp(120px, 18vw, 200px);
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+.cs-streak-medium {
+    width: clamp(90px, 13vw, 155px);
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+.cs-streak-small {
+    width: clamp(70px, 10vw, 120px);
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+/* ── Design System image (no animation) ── */
+.cs-design-system {
+    width: 100%;
+}
+
+/* ── Title Row ── */
+.cs-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+/* ── Live Site Button ── */
+.cs-live-btn,
+.cs-figma-wrap {
+    margin-top: 1.8rem;
+}
+
+.cs-live-btn {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    color: white !important;
+    background: #c0392b;
+    padding: 0.55rem 1.6rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: background 0.2s ease;
+}
+
+.cs-live-btn:hover {
+    background: #a93226;
+    color: white !important;
+}
+
+.cs-figma-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.6rem;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: background 0.2s ease;
+}
+
+.cs-figma-btn img {
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: contain;
+}
+
+.cs-figma-btn:hover {
+    background: #333;
+}
+
+.cs-figma-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.cs-figma-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: #555;
+}
+
+/* ── Process Section ── */
+.cs-process-row {
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+/* ── Components Grid (no animation) ── */
+.cs-components-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.cs-components-row {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.cs-components-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+}
+
+.cs-component {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cs-component-full {
+    width: 100%;
+    max-width: 100%;
+}
+
+.cs-col-right .cs-components-grid {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* ── Icon Ideation ── */
+.cs-icon-logo-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-icon-logo {
+    width: clamp(140px, 20vw, 220px);
+    transform: rotate(-35deg);
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+/* ── Icon Breakdown ── */
+.cs-breakdown {
+    padding: 2rem 0;
+}
+
+.cs-breakdown-shapes {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 2.5rem 0;
+}
+
+.cs-breakdown-shapes::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 2px dashed #aaa;
+    z-index: 0;
+}
+
+.cs-shape {
+    position: relative;
+    z-index: 1;
+    border: 2.5px solid #111;
+}
+
+.cs-shape-triangle {
+    width: 44px;
+    height: 64px;
+    background: #2b2b2b;
+    clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+    border: none;
+    filter: drop-shadow(0 0 0 2px #111);
+}
+
+.cs-shape-rect-dark {
+    background: #555;
+}
+
+.cs-shape-rect-light {
+    background: #e8e4dc;
+}
+
+.cs-shape-rect-orange {
+    background: #c8603a;
+}
+
+.cs-shape-tall {
+    width: 34px;
+    height: 70px;
+}
+
+.cs-shape-wide {
+    width: 110px;
+    height: 50px;
+}
+
+/* ── Accent color ── */
+:root {
+    --cs-red: #c0392b;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    .cs-two-col {
+        flex-direction: column;
+    }
+
+    .cs-streak-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cs-streak-section .cs-body {
+        flex: none;
+    }
+}
