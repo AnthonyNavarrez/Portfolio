@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="den.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Den — Case Study</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav>
+        <div class="nav-left">
+            <a href="../index.html">← Back</a>
+        </div>
+        <div class="nav-right"></div>
+    </nav>
+
+    <img class="den-bg-design" src="../images/Den-BG-Design.png" alt="">
+
+    <main>
+        <div class="den-search-title">
+            <img class="den-search-bg-img" src="../images/Den-SearchBg.png" alt="">
+            <span class="den-search-label">Problem</span>
+        </div>
+
+        <div class="den-problem-row">
+            <img class="den-icon-float" src="../images/Den-Icon.png" alt="Den icon">
+            <div class="den-problem-text">
+                <p>New Students need help exploring study spots and discovering where to study on/near campus. Without guidance, they rely on word-of-mouth or trial-and-error, wasting time bouncing between locations to find a spot that matches their needs</p>
+                <p>Returning Students need real-time information about study locations. Even if they know the campus, spots change (renovations, seasonal closures, new spaces open), crowd patterns vary by time/semester, and their study needs evolve.</p>
+            </div>
+        </div>
+        <div class="den-how-section">
+            <h2 class="den-how-title">How Den solves this</h2>
+            <p class="den-how-sub">A mobile app that visualizes study spots on a map, allowing users to discover:</p>
+            <div class="den-solve-item">
+                <span class="den-num">1.</span>
+                <p class="den-solve-text">New Study Locations with their live capacity, rating, and directions. Save your favorite spots!</p>
+            </div>
+        </div>
+        <div class="den-screens-row">
+            <img class="den-screen" src="../images/Den-Map-Screen.png" alt="Map screen">
+            <img class="den-screen" src="../images/Den-Favorite-Screen.png" alt="Favorites screen">
+            <div class="den-cards-col">
+                <img class="cs-float" src="../images/Den-Card1.png" alt="Card 1">
+                <img class="cs-float" src="../images/Den-Card2.png" alt="Card 2">
+                <img class="cs-float" src="../images/Den-Card3.png" alt="Card 3">
+            </div>
+        </div>
+
+        <div class="den-how-section">
+            <div class="den-solve-item">
+                <span class="den-num">2.</span>
+                <p class="den-solve-text">Apply specific filter to find only study spots that satisfy all your study needs</p>
+            </div>
+        </div>
+
+        <div class="den-two-screens-row">
+            <img class="den-two-screen" src="../images/Den-Filter-Screen.png" alt="Filter screen">
+            <img class="den-two-screen" src="../images/Den-Detail-Screen.png" alt="Detail screen">
+        </div>
+        <div class="den-how-section">
+            <div class="den-solve-item">
+                <span class="den-num">3.</span>
+                <p class="den-solve-text">Read community reviews and leave your own</p>
+            </div>
+        </div>
+
+        <div class="den-reviews-row">
+            <img class="den-review cs-float" src="../images/Den-Review1.png" alt="Review 1">
+            <img class="den-review cs-float" src="../images/Den-Review2.png" alt="Review 2">
+            <img class="den-review cs-float" src="../images/Den-Review3.png" alt="Review 3">
+        </div>
+        <div class="den-search-title">
+            <img class="den-search-bg-img" src="../images/Den-SearchBg.png" alt="">
+            <span class="den-search-label">Process</span>
+        </div>
+
+        <div class="den-userflow-row">
+            <div class="den-userflow-wrap den-userflow--small">
+                <p class="den-userflow-label" style="margin-left: 3.5rem;">User Flow:<br>New student</p>
+                <img class="den-userflow" src="../images/Den-UserFlow1.svg" alt="User Flow: New Student">
+            </div>
+            <div class="den-userflow-wrap" style="flex:1">
+                <p class="den-userflow-label">User Flow:<br>Returning student</p>
+                <img class="den-userflow" src="../images/Den-UserFlow2.svg" alt="User Flow: Returning Student">
+            </div>
+        </div>
+        <div class="den-design-system-row">
+            <img class="den-design-system-img" src="../images/Den-Design-System.svg" alt="Design System">
+            <div class="den-design-system-text">
+                <h3 class="den-ds-title">Design System</h3>
+                <p class="den-ds-body">Modern and clean typography with concern for efficient readability.</p>
+                <p class="den-ds-body">Orange primary/secondary is warm and inviting. Provides nice contrast on Map background. Subtle Gray compliments provide visual rest between information-dense areas</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="../cursor.js"></script>
+    <script>
+        document.querySelectorAll('.cs-float').forEach(el => {
+            el.style.setProperty('--float-duration', (3 + Math.random() * 3) + 's');
+            el.style.setProperty('--float-delay', (Math.random() * 3) + 's');
+        });
+    </script>
+</body>
+</html>

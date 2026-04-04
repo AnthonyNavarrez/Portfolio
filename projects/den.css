@@ -1,0 +1,251 @@
+.den-search-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: clamp(280px, 55vw, 600px);
+    margin: 4rem auto 0;
+}
+
+.den-search-bg-img {
+    width: 100%;
+    display: block;
+}
+
+.den-search-label {
+    position: absolute;
+    left: 14%;
+    top: 50%;
+    transform: translateY(-58%);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: #111;
+    pointer-events: none;
+}
+
+.den-problem-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: clamp(280px, 55vw, 600px);
+    margin: 2rem auto 0;
+}
+
+.den-icon-float {
+    width: clamp(80px, 12vw, 130px);
+    flex-shrink: 0;
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+.den-problem-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.den-problem-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #111;
+}
+
+.den-how-section {
+    width: clamp(280px, 55vw, 600px);
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    text-align: center;
+}
+
+.den-how-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: #111;
+}
+
+.den-how-sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    font-weight: 400;
+    color: #111;
+    line-height: 1.7;
+}
+
+.den-solve-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.den-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(to top, #F07828, #F5B97A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+}
+
+.den-solve-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    font-weight: 400;
+    color: #111;
+    line-height: 1.7;
+    padding-top: 0.5rem;
+    max-width: 40ch;
+}
+
+.den-screens-row {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    width: clamp(280px, 75vw, 900px);
+    margin: 3rem auto 0;
+}
+
+.den-screen {
+    width: clamp(120px, 22vw, 280px);
+    height: clamp(240px, 44vw, 560px);
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.den-cards-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.3rem;
+    flex: 0 0 auto;
+    width: clamp(120px, 18vw, 220px);
+}
+
+.den-cards-col img {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: contain;
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+.den-two-screens-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem auto 0;
+}
+
+.den-two-screen {
+    width: clamp(120px, 22vw, 280px);
+    height: clamp(240px, 44vw, 560px);
+    object-fit: contain;
+}
+
+.den-reviews-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem auto 0;
+    width: clamp(280px, 80vw, 1000px);
+}
+
+.den-review {
+    flex: 1;
+    width: 0;
+    object-fit: contain;
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+.den-userflow-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto 0;
+    width: clamp(280px, 80vw, 1000px);
+}
+
+.den-userflow {
+    flex: 1;
+    width: 0;
+}
+
+.den-userflow-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.den-userflow-wrap .den-userflow {
+    width: 100%;
+    flex: unset;
+}
+
+.den-userflow--small {
+    flex: 0.8;
+}
+
+.den-userflow-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    font-weight: 400;
+    color: #111;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.den-design-system-row {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    width: clamp(280px, 80vw, 1000px);
+    margin: 3rem auto 0;
+}
+
+.den-design-system-img {
+    flex: 1;
+    width: 0;
+}
+
+.den-design-system-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.den-ds-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: #111;
+}
+
+.den-ds-body {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    font-weight: 400;
+    color: #111;
+    line-height: 1.7;
+}
+
+.den-bg-design {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: clamp(300px, 50vw, 650px);
+    pointer-events: none;
+    z-index: -1;
+}
