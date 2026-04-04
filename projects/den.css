@@ -1,3 +1,78 @@
+.den-cta-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 4rem auto 0;
+}
+
+.den-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.den-cta-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.65rem;
+    color: #555;
+}
+
+.den-proto-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: #111;
+    border-radius: 0.5rem;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.den-proto-btn:hover {
+    background: #333;
+}
+
+.den-proto-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #C0392B;
+    border-radius: 0.3rem;
+}
+
+.den-proto-dot {
+    display: block;
+    width: 0.55rem;
+    height: 0.55rem;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.cs-figma-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.6rem;
+    transition: background 0.2s ease;
+}
+
+.cs-figma-btn img {
+    width: 1.4rem;
+    height: 1.4rem;
+    object-fit: contain;
+}
+
+.cs-figma-btn:hover {
+    background: #333;
+}
+
 .den-search-title {
     position: relative;
     display: flex;
@@ -111,6 +186,10 @@
     gap: 1rem;
     width: clamp(280px, 75vw, 900px);
     margin: 3rem auto 0;
+}
+
+.den-favorite-screen {
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
 }
 
 .den-screen {
@@ -240,6 +319,45 @@
     color: #111;
     line-height: 1.7;
 }
+
+.den-comp-proto-row {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: clamp(280px, 80vw, 1000px);
+    margin: 3rem auto 0;
+}
+
+.den-comp-proto-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.den-comp-stage {
+    position: relative;
+    flex: 1.2;
+    aspect-ratio: 1.4 / 1;
+    flex-shrink: 0;
+}
+
+.den-comp-stage img {
+    position: absolute;
+    object-fit: contain;
+    animation: cardFloat var(--float-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+}
+
+.den-comp-search     { left: 13%; top: 5%;  width: 50%; }
+.den-comp-location   { left: 74%; top: 2%;  width: 10%; }
+.den-comp-bar        { left: 13%; top: 19%; width: 50%; }
+.den-comp-heart      { left: 4%;  top: 30%; width: 17%; }
+.den-comp-check      { left: 20%; top: 30%; width: 12%; }
+.den-comp-card       { left: 41%; top: 28%; width: 54%; }
+.den-comp-filter     { left: 5%;  top: 59%; width: 10%; }
+.den-comp-distance   { left: 18%; top: 60%; width: 17%; }
+.den-comp-directions { left: 10%; top: 78%; width: 25%; }
 
 .den-bg-design {
     position: fixed;
